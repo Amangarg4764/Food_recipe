@@ -1,15 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React,{useState, useEffect } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Recipes from "./components/Recipes";
 import Axios from "axios";
+import Footer from './Footer';
 
 function App() {
   const [search, setSerach] = useState("chiken");
   const [recipes, setRecipes] = useState([]);
 
-  const APP_ID = "YOUR_APPLICATION_ID";
-  const APP_KEY = "YOUR_APPLICATION_KEY";
+  const APP_ID = "e6321363";
+  const APP_KEY = "a68805825a75f6fec6c546ded2978455";
 
   useEffect(() => {
     getRecipes();
@@ -39,6 +40,7 @@ function App() {
       <div className="container">
         <Recipes recipes={recipes} />
       </div>
+      <div><Footer/></div>
     </div>
   );
 }
